@@ -22,7 +22,11 @@ const c0 = DATA["NIST"]["speed of light in vacuum"]
 """
 Newtonian constant of gravitation
 """
-const G = DATA["NIST"]["Newtonian constant of gravitation"]
+const Gg = DATA["NIST"]["Newtonian constant of gravitation"]
+"""
+Sanchez constant of gravitation
+"""
+const G = DATA["NIST"]["Sanchez constant of gravitation"]
 """
 standard acceleration of gravity
 """
