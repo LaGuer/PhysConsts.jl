@@ -112,5 +112,6 @@ Some constants is defined in theory, like **magnetic constant (vacuum permeabili
 
 ## Author(s)
 
-[QuantumBFS](https://github.com/QuantumBFS/)
-[LaGuer](https://github.com/LaGuer/)
+**[QuantumBFS](https://github.com/QuantumBFS/)**
+
+**[LaGuer](https://github.com/LaGuer/)**
