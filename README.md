@@ -109,6 +109,29 @@ Some constants is defined in theory, like **magnetic constant (vacuum permeabili
 - `μ0`: magnetic constant (vacuum permeability)
 - `ε0`: electric constant (vacuum permittivity)
 
+### Updated universal constants and particle properties ( thanks to Jean Maruani / Francis Sanchez)
+* [The_Dirac_Electron_From_Quantum_Chemistry_to_Holistic_Cosmology @ researchgate](https://www.researchgate.net/publication/287808070_The_Dirac_Electron_From_Quantum_Chemistry_to_Holistic_Cosmology)
+* [Dirac_Electron_From_Quantum_Chemistry_to_Holistic_Cosmology @ Wiley](https://onlinelibrary.wiley.com/doi/abs/10.1002/jccs.201500374)
+
+| Symbol | Name                       | Formula                  | Dimension        | Value            | Unit             |
+| ------ | ----                       | -----                    | ----             | -----            | ----             |
+| `G`    | Sz constant of gravitation | F_gr=Gmm'/d^2            | M^-1L^3T^-2      | 6.675453818e-11  | `m^3 kg^-1 s^-2` |
+| `k_e`  | Electrostatic constant     |     k_e.e^2 / ħc         | dimensionless    | 8.98e-9          | `F^-1.m`         |
+| `α`    | Fine structure constant    | a=α^-1  F_el=ħc/αd^2     | dimensionless    | (137.0359991)^-1 | `pure number`    |
+| `δ_e`  | Electron grav invariant    |                          | dimensionless    | 1.7517e-45       | `pure number`    |
+| `δ_n`  | Nucleon grav invariant     |                          | dimensionless    | 5.9138e-39       | `pure number`    |
+| `δ_X`  | Cross grav invariant       |                          | dimensionless    | 1.6917e-38       | `pure number`    |
+| `C`    | Gravitational velocity     |                          | L.T^-1           | 3.6993e44        | `m s^-1`         |
+| `R_U`  | Universe Hubble radius     | R_U=2G.M_U/c)^2          | L                | 1.3065e26        | `m`              |
+| `G_F`  | Fermi Constant             | G_F=ħ^3/cm_F^2           |   ML^5T^-2       | 8.7936e52        | `J.m^3`          |
+| `a_G`  |Gravitation Sanchez Constant| a_G=ħc/Gm_pm_H           | dimensionless    | 1.6919335e38     | `pure number`    |
+| `M_U`  | Universe Sanchez Mass      | M_U=(ħc/G)^2/m_e.m_p.m_n | M                | 8.7936e52        | `kg`             |
+| `r_0`  | Bare Hydrogen Bohr radius  |    aħ/m_ec               | L                | 5.291772103e-11  | `m`              |
+| `H`    |Hydrogen-electron mass ratio|    m_H/m_e               | dimensionless    | 1837.152645      | `m_e`            |
+| `p`    |Proton-electron mass ratio  |    m_p/m_e               | dimensionless    | 1836.152672      | `m_e`            |
+| `n`    |Neutron-electron mass ratio |    m_n/m_e               | dimensionless    | 1838.683659      | `m_e`            |
+| `μ-`   |Muon-electron mass ratio    |    m_m/m_e               | dimensionless    | 206.7682869      | `m_e`            |
+| `τ-`   |Tau-electron mass ratio     |    m_t/m_e               | dimensionless    | 3477.441701      | `m_e`            |
 
 ## Author(s)
 
