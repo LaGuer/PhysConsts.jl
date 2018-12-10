@@ -24,7 +24,7 @@ Use import to import certain constant's alias input the scope. And you can acces
 
 ```julia-repl
 # import atomic unit of charge
-julia> import Constants: e
+julia> import PhysConsts: e
 
 julia> e.quantity
 "atomic unit of charge"
@@ -56,15 +56,15 @@ julia> e + 2
 All constants is stored in a `Dict` called `DATA`, `Constants` will `export` this dict, you can access it by
 
 ```julia-repl
-julia> import Constants
+julia> import PhysConsts
 
-julia> Constants.DATA
+julia> PhysConsts.DATA
 ```
 
 or 
 
 ```julia-repl
-julia> using Constants
+julia> using PhysConsts
 
 julia> DATA
 ```
@@ -80,7 +80,7 @@ julia> Constants.DATA["NIST"]["YOUR CONSTANT NAME"]
 e.g
 
 ```julia-repl
-julia> Constants.DATA["NIST"]["standard atmosphere"]
+julia> PhysConsts.DATA["NIST"]["standard atmosphere"]
 101325.0
 
 ```
@@ -92,14 +92,17 @@ Some constants is defined in theory, like **magnetic constant (vacuum permeabili
 ### List of Bindings
 
 - `c`: speed of light in vacuum
+- `C`: Gravitational Velocity
 - `c0`: speed of light in vacuum
-- `G`: Newtonian constant of gravitation
+- `G`: Sanchez constant of gravitation
+- `Gg`: Newtonian constant of gravitation
 - `g`: standard acceleration of gravity
 - `h`: Planck constant
 - `ħ` : Planck constant over 2 pi
 - `e`: atomic unit of charge (use `eu` for mathematical constant `e`)
 - `a0` : Bohr radius
 - `α` : fine-structure constant
+- `a` : electric constant by Francis M. Sanchez
 - `k`: Boltzmann constant
 - `NA`: Avogadro constant
 - `atm`: standard atmosphere
@@ -107,6 +110,7 @@ Some constants is defined in theory, like **magnetic constant (vacuum permeabili
 - `ε0`: electric constant (vacuum permittivity)
 
 
-## Author
+## Author(s)
 
 [QuantumBFS](https://github.com/QuantumBFS/)
+[LaGuer](https://github.com/LaGuer/)
