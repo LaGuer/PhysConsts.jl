@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/QuantumBFS/PhysConsts.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/QuantumBFS/PhysConsts.jl?branch=master)
 [![codecov.io](http://codecov.io/github/QuantumBFS/PhysConsts.jl/coverage.svg?branch=master)](http://codecov.io/github/QuantumBFS/PhysConsts.jl?branch=master)
 
-Physical Constants
+Physical Constants updated with 26th CGPM BIPM data anticipating CODATA2019 release scheduled in May 2019.
 
 
 Some useful constants for Julia.
