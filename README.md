@@ -25,7 +25,7 @@ Use import to import certain constant's alias input the scope. And you can acces
 ```julia-repl
 # import electric constant
 julia> import PhysConsts.DATA
-(α.value)^-1
+
 julia> α.quantity
 "fine-structure constant"
 
