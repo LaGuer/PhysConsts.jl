@@ -23,20 +23,20 @@ Pkg.add("PhysConsts")
 Use import to import certain constant's alias input the scope. And you can access some property by the following commands.
 
 ```julia-repl
-# import atomic unit of charge
-julia> import PhysConsts: e
+# import electric constant
+julia> import PhysConsts.DATA
+(α.value)^-1
+julia> α.quantity
+"fine-structure constant"
 
-julia> e.quantity
-"atomic unit of charge"
+julia> α.uncertainty
+1.7e-12
 
-julia> e.uncertainty
-9.8e-28
+julia> α.unit
+""
 
-julia> e.unit
-"C"
-
-julia> e.value
-1.6021766208e-19
+julia> (α.value)^-1
+137.03599913815452
 
 ```
 
@@ -53,7 +53,7 @@ julia> e + 2
 
 ## A list of included constants
 
-All constants is stored in a `Dict` called `DATA`, `Constants` will `export` this dict, you can access it by
+All constants are stored in a `Dict` called `DATA`, `Constants` will `export` this dict, you can access it by
 
 ```julia-repl
 julia> import PhysConsts
