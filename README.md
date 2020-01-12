@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/laguer/PhysConsts.jl.svg?branch=master)](https://travis-ci.org/laguer/PhysConsts.jl)
 [![Build status](https://ci.appveyor.com/api/projects/status/ohphqhlx028mdjdb?svg=true)](https://ci.appveyor.com/project/laguer/physconsts-jl)
 [![Coverage Status](https://coveralls.io/repos/laguer/PhysConsts.jl/badge.svg?branch=master&service=github)](https://coveralls.io/laguer/PhysConsts.jl?branch=master)
-[![codecov.io](http://codecov.io/laguer/PhysConsts.jl/coverage.svg?branch=master)](http://codecov.io/laguer/PhysConsts.jl?branch=master)
+[![codecov](https://codecov.io/gh/LaGuer/PhysConsts.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/LaGuer/PhysConsts.jl)
 
 Physical Constants updated with 26th CGPM BIPM data anticipating CODATA2019 release scheduled in May 2019.
 
