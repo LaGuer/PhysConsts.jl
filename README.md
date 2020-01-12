@@ -1,7 +1,7 @@
 # PhysConsts
 
 [![Build Status](https://travis-ci.org/laguer/PhysConsts.jl.svg?branch=master)](https://travis-ci.org/laguer/PhysConsts.jl)
-[![Build status](https://ci.appveyor.com/api/projects/status/ohphqhlx028mdjdb?svg=true)](https://ci.appveyor.com/project/laguer/physconsts-jl)
+[![Build status](https://ci.appveyor.com/api/projects/status/q078ix2tdvba12s6?svg=true)](https://ci.appveyor.com/project/LaGuer/physconsts-jl)
 [![Coverage Status](https://coveralls.io/repos/laguer/PhysConsts.jl/badge.svg?branch=master&service=github)](https://coveralls.io/laguer/PhysConsts.jl?branch=master)
 [![codecov](https://codecov.io/gh/LaGuer/PhysConsts.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/LaGuer/PhysConsts.jl)
 
