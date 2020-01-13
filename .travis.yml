@@ -62,7 +62,7 @@ jobs:
 #        - julia --project=@ -e 'import Pkg; Pkg.add("Documenter")'
 #        - julia --project=@ -e 'import Pkg; Pkg.add("Measurements")'
 #        - julia --project=@ -e 'import Pkg; Pkg.add("Unitful")'
-        - julia --project=@ -e 'import Pkg; Pkg.add("PhysConsts")'
+        - julia --project=@ -e 'import Pkg; Pkg.clone("https://github.com/LaGuer/PhysConsts.jl")'
         - julia --project=@ --color=yes -e 'using Pkg; Pkg.build()'
         - julia --project=@ -e 'import Pkg; Pkg.status()'
         - julia --project=@ -e 'import Pkg; Pkg.build()'
