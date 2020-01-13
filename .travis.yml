@@ -1,0 +1,84 @@
+# Documentation:  http://docs.travis-ci.com/user/languages/julia/
+language: julia
+codecov: true
+os:
+  - linux
+#  - osx
+julia:
+#  - 0.7
+#  - 1.0
+  - 1.1
+#  - 1.2
+#  - nightly
+matrix:
+  allowed_failures:
+    - julia: 0.7
+#    - julia: 1.0
+# Work around a Travis bug
+git:
+  depth: 999999
+notifications:
+  email: false
+sudo: false
+#addons:
+#    apt_packages:
+#        - gfortran
+#env:
+matrix:
+  allow_failures:
+  - julia: nightly
+#    - JULIA_PhysConsts_BUILD_SOURCE=true
+#    - JULIA_PhysConsts_BUILD_SOURCE=false
+before_install:
+  - pwd
+#  - export JL_PKG=PhysConsts
+#  - ls
+#  - cd PhysConsts.jl
+#  - git clone https://github.com/LaGuer/PhysConsts.jl.git PhysConsts.jl
+#  - pwd
+  - if [ ${TRAVIS_OS_NAME} == "osx" ]; then brew update >/dev/null 2>&1; fi
+script:
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+#  - julia -e 'Pkg.clone("https://github.com/LaGuer/PhysConsts.jl"); Pkg.build("PhysConsts")'
+#  - julia -e 'Pkg.build("PhysConsts")'
+#  - julia -e 'Pkg.test("PhysConsts"; coverage=false)'
+after_success:
+  - echo $TRAVIS_JULIA_VERSION
+#  - julia -e 'cd(Pkg.dir("PhysConsts")); ps=Pkg.PackageSpec(name="Documenter", version="0.21"); Pkg.add(ps); Pkg.pin(ps); include(joinpath("docs", "make.jl"))'
+#  - julia -e 'cd(Pkg.dir("PhysConsts")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+  - julia -e 'import Pkg; Pkg.clone("https://github.com/LaGuer/PhysConsts.jl"); ps=Pkg.PackageSpec(name="Documenter", version="0.21"); Pkg.add(ps); Pkg.pin(ps); include(joinpath("docs", "make.jl"))'
+  - julia -e 'import Pkg; Pkg.status(); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+  - julia -e 'import Pkg; Pkg.add("Coverage"); using Coverage; Coveralls.submit(process_folder()); Codecov.submit(process_folder())'
+
+
+
+jobs:
+  include:
+    - stage: "Documentation"
+      julia: 1.1
+      codecov: true
+      os: linux
+      script:
+#        - julia --project=@ -e 'import Pkg; Pkg.add("Documenter")'
+#        - julia --project=@ -e 'import Pkg; Pkg.add("Measurements")'
+#        - julia --project=@ -e 'import Pkg; Pkg.add("Unitful")'
+        - julia --project=@ -e 'import Pkg; Pkg.add("PhysConsts")'
+        - julia --project=@ --color=yes -e 'using Pkg; Pkg.build()'
+        - julia --project=@ -e 'import Pkg; Pkg.status()'
+        - julia --project=@ -e 'import Pkg; Pkg.build()'
+        - julia --project=@ -e 'using Pkg; Pkg.instantiate()'
+#        - julia --project=@ docs/make.jl
+
+      after_success:
+#        - julia --project=@ -e 'import Pkg; Pkg.add("Documenter")'
+#        - julia -e 'import Pkg; Pkg.add("Measurements")'
+#        - julia -e 'import Pkg; Pkg.add("Unitful")'
+        - julia -e 'using Pkg; Pkg.instantiate()'
+        - julia --check-bounds=yes --color=yes -e 'using Pkg; Pkg.test(coverage=true)'
+        - julia --code-coverage test/runtests.jl
+  #      - julia --project=@ docs/ -e 'using Pkg; Pkg.instantiate();
+  #                                  Pkg.develop(PackageSpec(path=pwd()))'
+  #      - julia --project=@ docs/ docs/make.jl
+        - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+        - julia -e 'import Pkg; cd(Pkg.dir("MathPhysicalConstants")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+        - julia -e 'import Pkg; cd(Pkg.dir("MathPhysicalConstants")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
