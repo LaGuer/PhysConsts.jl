@@ -1,7 +1,7 @@
 """
     NISTConst{T} <: AbstractPhysicsConst{T}
 
-NIST CODATA Physics Constants (2014).
+NIST CODATA Physics Constants (2019).
 """
 struct NISTConst{T} <: AbstractPhysicsConst{T}
     quantity::String
@@ -27,7 +27,7 @@ function NISTConst(d::Dict{String})
         uncertainty = Meta.parse(Compat.replace(d["Uncertainty"], " " => ""))
     end
 
-    NISTConst(d["Quantity "], promote(value, uncertainty)..., d["Unit"])
+    NISTConst(d["Quantity"], promote(value, uncertainty)..., d["Unit"])
 end
 
 json(c::NISTConst) = throw(ErrorException("NISTConst should not be serialized"))
@@ -36,7 +36,7 @@ function parse(::Type{NISTConst}, file::DataFile{JSONFormat})
     raw = parse(file)["constant"]
     data = Dict{String, Any}()
     for each in raw
-        data[each["Quantity "]] = NISTConst(each)
+        data[each["Quantity"]] = NISTConst(each)
     end
     return data
 end
