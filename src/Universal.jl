@@ -4,13 +4,7 @@
 DATA["NIST"] = parse(NISTConst, DATAFILES["NIST"])
 
 # Universal constants
-export a, c, C, c0, G, Gg, g, ħ, h
-"""
-electro static constant
-"""
-const a = DATA["NIST"]["Electro Static constant"]
-"""
-electro static constant
+export c, c0, G, g, ħ, h
 """
 speed of light in vacuum
 """
@@ -22,11 +16,7 @@ const c0 = DATA["NIST"]["speed of light in vacuum"]
 """
 Newtonian constant of gravitation
 """
-const Gg = DATA["NIST"]["Newtonian constant of gravitation"]
-"""
-Sanchez constant of gravitation
-"""
-const G = DATA["NIST"]["Sanchez constant of gravitation"]
+const G = DATA["NIST"]["Newtonian constant of gravitation"]
 """
 standard acceleration of gravity
 """
@@ -85,7 +75,7 @@ export μ0, ε0
 """
 magnetic constant (vacuum permeability)
 """
-const μ0 = DefConst("magnetic constant (vacuum permeability)", 4pi*10e-7, "H m^{-1}")
+const μ0 = DefConst("magnetic constant (vacuum permeability)", 4pi*1e-7, "N A^{-2}")
 
 """
 electric constant (vacuum permittivity)
