@@ -1561,6 +1561,24 @@
                 "Unit": "eV Hz^-1"
             },
             {
+                "Quantity": "Planck constant over 2 pi",
+                "Value": "1.054 571 800 e-34",
+                "Uncertainty": "0.000 000 013 e-34",
+                "Unit": "J s"
+            },
+            {
+                "Quantity": "Planck constant over 2 pi in eV s",
+                "Value": "6.582 119 514 e-16",
+                "Uncertainty": "0.000 000 040 e-16",
+                "Unit": "eV s"
+            },
+            {
+                "Quantity": "Planck constant over 2 pi times c in MeV fm",
+                "Value": "197.326 9788",
+                "Uncertainty": "0.000 0012",
+                "Unit": "MeV fm"
+            },
+            {
                 "Quantity": "Planck length",
                 "Value": "1.616 255 e-35",
                 "Uncertainty": "0.000 018 e-35",
