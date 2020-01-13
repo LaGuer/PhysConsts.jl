@@ -22,9 +22,9 @@ include("Defined.jl")
 # Load Data
 DATAFILES = Dict{String, DataFile}()
 DATAFILES["NIST"] = DataFile(
-    "https://nist.gov/srd/srd_data//srd121_allascii_2014.json",
+    "https://raw.githubusercontent.com/LaGuer/PhysConsts.jl/master/data/srd121_allascii_2018.json",
     @__DATA__,
-    "srd121_allascii_2014.json"
+    "srd121_allascii_2018.json"
 )
 obtain(DATAFILES["NIST"])
 
