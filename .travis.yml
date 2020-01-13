@@ -80,5 +80,5 @@ jobs:
   #                                  Pkg.develop(PackageSpec(path=pwd()))'
   #      - julia --project=@ docs/ docs/make.jl
         - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
-        - julia -e 'import Pkg; cd(Pkg.dir("MathPhysicalConstants")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
-        - julia -e 'import Pkg; cd(Pkg.dir("MathPhysicalConstants")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
+        - julia -e 'import Pkg; cd(Pkg.dir("PhysConsts")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+        - julia -e 'import Pkg; cd(Pkg.dir("PhysConsts")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
