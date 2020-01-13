@@ -1,7 +1,7 @@
 #desc = "Physical Constant CODATA2019."
 #keywords = ["physical", "constants", "codata"]
 name = "PhysConsts"
-#uuid = "988cf3cc-0386-11e9-15da-fbc5ac71f155"
+uuid = "0ec285f8-91b7-5dbf-9bdf-a8c7fa63d820"
 #repo = "https://github.com/LaGuer/PhysConsts.jl.git"
 author = "La Guer"
 license = "MIT"
