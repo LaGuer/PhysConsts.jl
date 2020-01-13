@@ -45,7 +45,7 @@ build_script:
 #    write(\"Project.toml\", before);
 #  - C:\julia\bin\julia -e "import Pkg; Pkg.update("PhysConsts")"
 #  - C:\julia\bin\julia -e "using PhysConsts.CODATA2019; CODATA2019.c_0"
-  - C:\julia\bin\julia -e "import Pkg; Pkg.clone("https://github.com/LaGuer/PhysConsts.jl")"
+#  - C:\julia\bin\julia -e "import Pkg; Pkg.clone("https://github.com/LaGuer/PhysConsts.jl")"
   - C:\julia\bin\julia -e "import Pkg; Pkg.build()"
   - C:\julia\bin\julia -e "import Pkg; Pkg.status()"
 
