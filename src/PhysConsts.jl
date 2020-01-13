@@ -30,6 +30,6 @@ obtain(DATAFILES["NIST"])
 
 # Constants Alias
 include("Universal.jl")
-include("Pauli.jl")
+# include("Pauli.jl")
 
 end # module
